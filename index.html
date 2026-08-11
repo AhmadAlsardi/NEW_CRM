@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Media CRM Training</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app"></div>
+
+<div class="modal-backdrop hidden" id="notesModal">
+  <div class="modal">
+    <div class="modal-head">
+      <strong>Stop Timer</strong>
+      <button class="icon-btn" onclick="closeNotesModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <label>Notes</label>
+      <textarea id="timerNotes" rows="5" placeholder="Write what you worked on..."></textarea>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-light" onclick="closeNotesModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveTimerEntry()">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="image-lightbox hidden" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img id="lightboxImage" alt="">
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
